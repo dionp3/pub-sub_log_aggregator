@@ -1,0 +1,15 @@
+venv/
+.venv/
+
+__pycache__/
+*.pyc
+
+.pytest_cache/
+htmlcov/
+.coverage
+
+dedup_store.db
+*.sqlite
+*.db
+
+aggregator_data/

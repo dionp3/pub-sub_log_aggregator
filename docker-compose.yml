@@ -1,0 +1,28 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  aggregator:
+    build: .
+    container_name: log_aggregator
+    volumes:
+      - ./aggregator_data:/app
+    ports:
+      - "8080:8080"
+    networks:
+      - pubsub_net
+    restart: always 
+
+  publisher:
+    build: .
+    container_name: log_publisher
+    depends_on:
+      - aggregator 
+    networks:
+      - pubsub_net
+    command: ["python", "-c", "import asyncio; asyncio.run(asyncio.sleep(5)); import src.publisher_sender; asyncio.run(src.publisher_sender.send_events())"]
+    restart: "no"
+    
+networks:
+  pubsub_net:
+    driver: bridge
