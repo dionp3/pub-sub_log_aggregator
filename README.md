@@ -145,5 +145,4 @@ Layanan Aggregator dijamin berfungsi dengan benar dan stabil melalui 6 *unit tes
 
 ## Video Demo
 
-[Cantumkan Link Video Demo YouTube Anda di sini]
-(Video mendemonstrasikan Build, Run, Pengiriman Duplikat, dan Persistensi State/Restart).
+[]
