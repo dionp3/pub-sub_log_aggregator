@@ -100,21 +100,7 @@ Instruksi ini mengasumsikan file kode berada di folder `pub-sub_log_aggregator`.
     docker stop aggregator-service
     ```
 
-### 2.4 Metrik dan Pengujian
 
-Endpoint **`GET /stats`** menyediakan metrik *real-time* yang vital:
-
-  * `received`: Total event yang masuk (mengukur beban kerja).
-  * `unique_processed`: Event yang berhasil diproses (mengukur *throughput* bersih).
-  * `duplicate_dropped`: Event yang terdeteksi dan diabaikan (mengukur *duplicate rate*).
-
-**Unit Tests (Pytest)** memverifikasi fungsionalitas inti:
-
-1.  Validasi Deduplikasi (*idempotency*).
-2.  Uji Persistensi Dedup Store (*simulasi restart*).
-3.  Uji Konsistensi `GET /stats`.
-4.  Validasi Skema Event.
-5.  Uji *Stress* Batch Kecil.
 
 -----
 

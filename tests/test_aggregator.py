@@ -11,7 +11,7 @@ from src.main import app, Aggregator
 from src.models import Event, EventPayload
 from httpx import AsyncClient, ASGITransport
 
-# --- Fixtures and Setup ---
+# Fixtures and Setup 
 
 TEST_DB_PATH = "test_dedup_store.db"
 
@@ -74,7 +74,7 @@ def create_mock_event(event_id=None, topic="test.log", source="service-A"):
         payload=EventPayload(content="Test log message")
     )
 
-# --- Unit Tests ---
+# Unit Tests
 
 @pytest.mark.asyncio
 async def test_t1_deduplication_validity(test_client, test_aggregator):

@@ -112,7 +112,7 @@ class Aggregator:
             uptime=uptime
         )
 
-# --- FastAPI App Setup ---
+# FastAPI App Setup
 app = FastAPI(title="Idempotent Log Aggregator")
 
 def get_aggregator() -> Aggregator:
