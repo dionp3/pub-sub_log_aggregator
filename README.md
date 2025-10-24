@@ -1,8 +1,5 @@
 # Pub-Sub Log Aggregator dengan Idempotent Consumer dan Deduplikasi
 
-Nama: Dion Prayoga
-NIM: 11221058
-
 ## Deskripsi Proyek
 
 Layanan ini mengimplementasikan Log Aggregator berbasis pola **Publish-Subscribe**. Sistem dirancang untuk menangani *at-least-once delivery* dari *publisher* dengan menjamin **exactly-once processing** melalui **Idempotent Consumer** dan **Durable Deduplication Store (SQLite)** yang persisten di dalam *container* Docker.
@@ -63,7 +60,7 @@ Ini menjalankan Aggregator dan mengasumsikan *Publisher* adalah Postman/cURL dar
 
     (Layanan dapat diakses di `http://localhost:8080` dan gunakan Endpoint API Log Aggregator).
 
-### B. Opsi Bonus (+10%): Docker Compose (Aggregator & Publisher)
+### B. Opsi Bonus: Docker Compose (Aggregator & Publisher)
 
 Ini menjalankan **dua *service* terpisah** dan mensimulasikan lalu lintas log otomatis.
 
@@ -81,8 +78,6 @@ Ini menjalankan **dua *service* terpisah** dan mensimulasikan lalu lintas log ot
     ```powershell
     docker logs log_aggregator -f
     ```
-
-NOTES: bisa di build namun masih ada error di container aggregator tentang folder src, jadi untuk bonus ini masih belum bisa, masih nyoba fix. 
 
 -----
 

@@ -1,4 +1,3 @@
-# tests/test_aggregator.py
 import pytest
 import asyncio
 import uuid

@@ -6,7 +6,7 @@ import asyncio
 import random
 import time
 
-AGGREGATOR_URL = "http://localhost:8080/publish"
+AGGREGATOR_URL = "http://aggregator:8080/publish"
 NUM_EVENTS = 5000
 DUPLICATE_RATE = 0.20 
 
